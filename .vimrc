@@ -1,6 +1,11 @@
+""
+" .vimrc
+"
+execute pathogen#infect()
+
 "" general vim stuff
 
-set sw=4              " shift width
+set sw=2              " shift width
 set et                " expand tabs. use 8 spaces instead of a tab.
 set nocp              " no compatibility
 set ru                " ruler
@@ -44,6 +49,8 @@ au BufNewFile,BufRead *.m,*.mi setf mason
 au BufNewFile,BufRead *.rb set sw=2
 filetype plugin on
 filetype indent on
+:au Filetype html,xml,xsl,erb source ~/.vim/scripts/closetag.vim
+:au Filetype c,py,rb,erb source ~/.vim/scripts/autoclose.vim
 
 "" indent params with parens
 
@@ -80,5 +87,3 @@ set tags=./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../..
 
 set diffopt+=iwhite
 
-:au Filetype html,xml,xsl,erb source ~/.vim/scripts/closetag.vim
-:au Filetype c,py,rb,erb source ~/.vim/scripts/autoclose.vim
