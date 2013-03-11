@@ -1,0 +1,93 @@
+## Accounts
+#
+
+source ~/.mutt/accounts/work.conf
+
+##
+# IMAP Settings
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+
+set ssl_starttls=yes
+set ssl_force_tls=yes 
+unset imap_passive 
+set mail_check=60 
+set timeout=10 
+set net_inc=5
+
+set move = no
+
+set sort = 'threads'
+set sort_aux = 'last-date-received'
+set imap_check_subscribed
+
+## Read Settings
+#
+
+set timeout=10
+set mail_check=5
+set sort=mailbox-order
+set move=no
+set mark_old=no
+set arrow_cursor=no
+set read_inc=1000
+set confirmappend=no
+set confirmcreate=yes
+
+ignore *
+unignore from to cc date subject sent
+hdr_order from to cc date sent subject
+
+set index_format="%{%b %d} %-15.15L [%Z] %s"
+
+# mutt sidebar settings
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
+macro index,pager B '<enter-command>toggle sidebar_visible<enter>'
+color sidebar_new yellow default
+
+## Composition Settings
+# 
+
+set editor="vim"
+set signature="~/.signature"
+set markers=no
+set include=yes
+set forward_format="Fwd: %s"
+set attribution="* %n (%a) [%(%y%m%d %H:%M)]:"
+set forward_quote=yes
+set alias_file="~/.mutt/Aliases"
+
+## Send Settings
+#
+
+set copy=yes
+
+## Pretty Settings
+#
+
+color status white blue
+color index green default ~N            # New
+color index red default ~D              # Deleted
+color index brightmagenta default ~T    # Tagged
+color index brightyellow default ~F     # Flagged
+color header green default "^Subject:"
+color header yellow default "^Date:"
+color header yellow default "^To:"
+color header yellow default "^Cc:"
+color header yellow default "^Bcc:"
+color header yellow default "^From:"
+color header red default "^X-.*:"
+
+## View Special Formats
+#
+
+set mailcap_path=~/.mutt/Mailcap
+auto_view text/html
+
+## Source other files
+#
+source ~/.mutt/Aliases
