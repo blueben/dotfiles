@@ -1,0 +1,3 @@
+zshreload () {
+  exec zsh
+}
