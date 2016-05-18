@@ -1,7 +1,28 @@
 ""
 " .vimrc
 "
-execute pathogen#infect()
+set all&
+
+set nocompatible               " be iMproved
+filetype off                   " required!
+set nobackup
+
+" set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+" 'Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" Bundle 'altercation/vim-colors-solarized'
+"Bundle 'tpope/vim-fugitive'
+"undle 't9md/vim-chef'
+"Bundle 'minibufexpl.vim'
+"Bundle 'itchyny/calendar.vim'
+
+filetype plugin indent on      " required!
 
 "" general vim stuff
 
@@ -17,6 +38,7 @@ set scrolloff=2       " show this many extra lines while scrolling
 set hidden            " allow hidden unsaved buffers
 set foldcolumn=0
 "set list lcs=tab:>-,trail:-
+set paste
 
 "" Search
 set hlsearch          " highlighed searches
@@ -40,7 +62,7 @@ set expandtab
 set number
 set numberwidth=4
 nmap <C-N><C-N> :set invnumber<CR>
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+" highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 "" filetype stuff
 
@@ -51,6 +73,8 @@ filetype plugin on
 filetype indent on
 :au Filetype html,xml,xsl,erb source ~/.vim/scripts/closetag.vim
 :au Filetype c,py,rb,erb source ~/.vim/scripts/autoclose.vim
+:au Filetype mail set textwidth=80
+:au Filetype mail set spell
 
 "" indent params with parens
 
@@ -58,7 +82,12 @@ autocmd BufNewFile,BufRead *.cc,*.cpp,*.h,*.hh,*.java set cinoptions+=(0
 
 "" view options
 
-syntax on
+syntax enable
+set t_Co=256
+set background=dark
+"" colorscheme solarized
+
+set colorcolumn=80
 
 "" include ?'s in keyworks in ruby
 set iskeyword=@,48-57,_,192-255,?
@@ -78,7 +107,10 @@ set complete=.,w,b,d,u,t,i,k
 set infercase
 
 "for minibufexplorer:
+let g:miniBufExplMapWindowNavVim = 1 
+let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1 
 let treeExplVertical=1
 
 set tags=./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags,../../../../../../tags,../../../../../../../tags
