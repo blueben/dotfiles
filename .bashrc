@@ -1,25 +1,35 @@
 ##
-# .bashrc
+# Ben's .bashrc configuration loader
 
-source $HOME/.profile
-source $HOME/.bash_ec2
 
-##
-# Shell Exports
+# .shellrc/bashrc.d
 
-export MANPATH=/opt/local/share/man:$MANPATH
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home/
-export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:~/bin:$EC2_HOME/bin
+if [ -d $HOME/.shellrc/bashrc.d ]
+then
+  for file in $HOME/.shellrc/bashrc.d/*.sh
+  do
+    . $file
+  done
+fi
 
-##
-# Shell Aliases
+# Load all files from
+# .shellrc/rc.d
 
-alias cleardns='dscacheutil -flushcache'
-alias cdchef='cd $HOME/Repo/seattlefenix-chef'
+if [ -d $HOME/.shellrc/rc.d ]
+then
+  for file in $HOME/.shellrc/rc.d/*.sh
+  do
+    . $file
+  done
+fi
 
-##
-# RVM Jazz
+# Load enabled site-specific configs from
+# .shell/client.d
 
-[[ -s "/Users/benjamin/.rvm/scripts/rvm" ]] && source "/Users/benjamin/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+if [ -d $HOME/.shellrc/site.d ]
+then
+  for file in $HOME/.shellrc/site.d/*.active
+  do
+    . $file
+  done
+fi
