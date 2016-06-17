@@ -2,12 +2,17 @@
 
 export LC_TYPE="C.utf8"
 
-rightprompt()
-{
+rightprompt() {
+    tput sc
     printf "%*s" $COLUMNS $?
+    tput rc
 }
 
+LAMBDA=$'\u03bb'
+GREEN=$'\033[0;92m'
+RED=$'\033[0;94m'
+RESET=$'\033[0m'
+
 #if [[ $LC_CTYPE =~ \.[Uu][Tt][Ff]-?8 ]]; then
-#  export PS1=$'$? \e[0;32m\xce\xbb\x0a\e[0m '
-  export PS1=$'$(rightprompt)\e[0;32m\u03bb\e[0m '
+  export PS1=$'\n$(rightprompt) $RED\w$RESET\n$GREEN $LAMBDA $RESET'
 #fi
