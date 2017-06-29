@@ -25,7 +25,7 @@ ZSH_THEME="amusing"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git chef zsh-syntax-highlighting)
-plugins=(git)
+plugins=(git git-extras ssh-agent gpg-agent)
 
 source $ZSH/oh-my-zsh.sh
 
