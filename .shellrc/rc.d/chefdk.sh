@@ -1,6 +1,6 @@
 # ChefDK configuration
 
-if [ `/usr/bin/uname -o` = Msys ] || [ `/usr/bin/uname -o` = Cygwin ]
+if [ `/usr/bin/uname $UNAME_OPT` = Msys ] || [ `/usr/bin/uname $UNAME_OPT` = Cygwin ]
 then
 
   export PATH="/c/opscode/chefdk/embedded/bin:$PATH"

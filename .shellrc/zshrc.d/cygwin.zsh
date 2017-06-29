@@ -1,6 +1,6 @@
 # Cygwin
 
-if [ `/usr/bin/uname -o` = Cygwin ]
+if [ `/usr/bin/uname $UNAME_OPT` = Cygwin ]
 then
 
   if [ -e $HOME/.shellrc/rc.d/chef_aliases.sh ]
