@@ -1,3 +1,9 @@
 alias vi='vim'
-alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+
+if [ $OS = Darwin ]
+then
+  alias ls='ls -G'
+else
+  alias ls='ls --color=auto'
+fi
