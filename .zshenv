@@ -16,7 +16,7 @@ export PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin" # Treat me like an admin
 
 # Mac OS X
 
-if [ `/usr/bin/uname` = Darwin ]
+if [ `/usr/bin/uname $UNAME_OPT` = Darwin ]
 then
   export PATH="/opt/local/bin:/opt/local/sbin:$PATH"                      # MacPorts PATH
   export MANPATH="/opt/local/share/man:/usr/local/man:$MANPATH"
@@ -31,7 +31,7 @@ fi
 
 # Windows Cygwin env
 
-if [ `/usr/bin/uname -o` = Cygwin ]
+if [ `/usr/bin/uname $UNAME_OPT` = Cygwin ]
 then
   export PATH="$PATH:/c/Users/$USER/Portable"
 
