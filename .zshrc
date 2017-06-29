@@ -1,6 +1,11 @@
 ##
 # Ben's .zshrc configuration loader
 
+if [ -r $HOME/.shellrc/rc.d/get_os ]
+then
+  source $HOME/.shellrc/rc.d/get_os
+fi
+
 ##
 # Function loader
 
@@ -22,7 +27,7 @@ if [ -d $HOME/.shellrc/zshrc.d ]
 then
   for file in $HOME/.shellrc/zshrc.d/*.zsh
   do
-    time source $file
+    source $file
   done
 fi
 
@@ -33,7 +38,7 @@ if [ -d $HOME/.shellrc/rc.d ]
 then
   for file in $HOME/.shellrc/rc.d/*.sh
   do
-    time source $file
+    source $file
   done
 fi
 
@@ -44,6 +49,6 @@ if [ -d $HOME/.shellrc/site.d ]
 then
   for file in $HOME/.shellrc/site.d/*.active
   do
-    time source $file
+    source $file
   done
 fi
