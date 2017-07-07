@@ -44,10 +44,9 @@ fi
 
 # chruby
 
-if [ -e "/opt/admin/share/chruby/chruby.sh" ]
+if [ -e "/usr/local/share/chruby/chruby.sh" ]
 then
-  source /opt/admin/share/chruby/chruby.sh
-  chruby ruby-1.9
+  source /usr/local/share/chruby/chruby.sh
 fi
 
 if [ -e "$HOME/.dircolor" ]
