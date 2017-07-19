@@ -1,7 +1,7 @@
 alias vi='vim'
 alias grep='grep --color=auto'
 
-if [ $OS = Darwin ]
+if [ `uname $UNAME_OPT` = Darwin ]
 then
   alias ls='ls -G'
 else
