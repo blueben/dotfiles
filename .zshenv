@@ -11,7 +11,7 @@ setopt extendedglob
 
 # Shell PATH Exports
  
-export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/.bin:/usr/local/bin:$PATH"
 export PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin" # Treat me like an admin
 
 # Mac OS X
