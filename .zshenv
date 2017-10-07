@@ -20,7 +20,7 @@ if [ `/usr/bin/uname $UNAME_OPT` = Darwin ]
 then
   export PATH="/opt/local/bin:/opt/local/sbin:$PATH"                      # MacPorts PATH
   export MANPATH="/opt/local/share/man:/usr/local/man:$MANPATH"
-  export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home/"    # Mac Java
+  export JAVA_HOME=$(/usr/libexec/java_home)
 
   # Tell ls to be colourful
   export CLICOLOR=1
