@@ -6,4 +6,4 @@
 # yyyy-mm-dd
 HIST_STAMPS="yyyy-mm-dd"
 
-chruby ruby-2.4.1
+chruby ruby-2.4.2
