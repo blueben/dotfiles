@@ -14,6 +14,17 @@ setopt extendedglob
 export PATH="$HOME/.bin:/usr/local/bin:$PATH"
 export PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin" # Treat me like an admin
 
+# Consult
+
+export CONSUL_URL="http://esb-consul-prod.esb.vip.nordstrom.com:8500"
+
+# Go
+
+export GOPATH=$HOME/Go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
 # Mac OS X
 
 if [ `/usr/bin/uname $UNAME_OPT` = Darwin ]
@@ -41,6 +52,7 @@ then
   fi
 
 fi
+
 
 # chruby
 
