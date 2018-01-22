@@ -5,5 +5,3 @@
 # in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
 # yyyy-mm-dd
 HIST_STAMPS="yyyy-mm-dd"
-
-chruby ruby-2.4.2
