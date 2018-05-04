@@ -9,10 +9,9 @@ fi
 ##
 # Function loader
 
-fpath=( $HOME/.shellrc/zfunc.d "${fpath[@]}" )
-
 if [ -d $HOME/.shellrc/zfunc.d ]
 then
+  fpath=( $HOME/.shellrc/zfunc.d "${fpath[@]}" )
   for file in $HOME/.shellrc/zfunc.d/*
   do
     func_name=$(basename $file)
@@ -20,8 +19,20 @@ then
   done
 fi
 
+# Load completions in 
+# .shellrc/zcomp.d
+
+if [[ -d $HOME/.shellrc/zcomp.d ]]
+then
+  fpath=( $HOME/.shellrc/zcomp.d "${fpath[@]}" )
+  for file in $HOME/.shellrc/zcomp.d/*
+  do
+    autoload -U compinit
+  done
+fi
+
 # Load all zsh configuration files from
-# .shell/zshrc.d
+# .shellrc/zshrc.d
 
 if [ -d $HOME/.shellrc/zshrc.d ]
 then
@@ -32,7 +43,7 @@ then
 fi
 
 # Load all files from
-# .shell/rc.d
+# .shellrc/rc.d
 
 if [ -d $HOME/.shellrc/rc.d ]
 then
@@ -43,7 +54,7 @@ then
 fi
 
 # Load enabled site-specific configs from
-# .shell/client.d
+# .shellrc/client.d
 
 if [ -d $HOME/.shellrc/site.d ]
 then
@@ -52,3 +63,9 @@ then
     source $file
   done
 fi
+
+PATH="/Users/c70b/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/c70b/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/c70b/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/c70b/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/c70b/perl5"; export PERL_MM_OPT;
