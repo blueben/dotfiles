@@ -1,25 +1,9 @@
-# Dotfile git ignores. This is important because some dotfiles are sensitive
 
-# Include the following items
-!.babunrc
-!.bashrc
-!.curlrc
-!.dircolor
-!.gitignore
-!.irbc
-!.mutt/**
-!.muttrc
-!.oh-my-zsh/custom/**
-!.shellrc/**
-!.vim/**
-!.vimrc
-!.zshenv
-!.zshrc
+# Do not check in sensitive files
 
-# Do not include site specific configuration
-.shellrc/site.d/**
-
-# And do not include anything else
-**
-
-src/**
+*.pem
+*.pub
+*.key
+*.crt
+*.csr
+id_*
