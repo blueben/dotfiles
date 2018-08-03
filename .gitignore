@@ -1,9 +1,20 @@
 
 # Do not check in sensitive files
 
+id_*
 *.pem
 *.pub
 *.key
 *.crt
 *.csr
-id_*
+*.srl
+*.swp
+
+# Or compressed files
+
+*.zip
+*.7z
+
+# MacOS folder attributes
+
+**/.DS_Store
