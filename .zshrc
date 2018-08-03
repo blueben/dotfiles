@@ -70,6 +70,9 @@ PERL_LOCAL_LIB_ROOT="/Users/c70b/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_R
 PERL_MB_OPT="--install_base \"/Users/c70b/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/c70b/perl5"; export PERL_MM_OPT;
 
+AUTOSUGGEST='/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh'
+[[ -f $AUTOSUGGEST ]] && . $AUTOSUGGEST
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
