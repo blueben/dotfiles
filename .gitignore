@@ -9,6 +9,7 @@ id_*
 *.csr
 *.srl
 *.swp
+*.gpg
 
 # Or compressed files
 
