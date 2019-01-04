@@ -1,0 +1,15 @@
+function chpwd () {
+  # Check to see if we're in a Chef cookbook dir and use ChefDK Ruby
+  if [ -f metadata.rb ]; then
+
+    eval "$(chef shell-init zsh)"
+    export CHEFDK_ENABLED
+
+  elif [ -n "$CHEFDK_ENABLED" ]; then
+
+    unset CHEFDK_ENABLED
+    chruby default
+    gem_home -
+
+  fi
+}
