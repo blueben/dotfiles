@@ -70,6 +70,6 @@ fi
 
 export TZ="/usr/share/zoneinfo/PST8PDT"
 
-# Preferences
+# Show timestamps in history
 
-export EDITOR="vim"
+HIST_STAMPS="yyyy-mm-dd"
