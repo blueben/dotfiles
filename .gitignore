@@ -10,6 +10,7 @@ id_*
 *.srl
 *.swp
 *.gpg
+!.git-crypt/*
 
 # Or compressed files
 
