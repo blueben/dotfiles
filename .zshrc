@@ -1,3 +1,37 @@
+## Embedded documentation!?
+#
+# Here are the ZSH startup files and their loading order
+#
+# /etc/zshenv 
+#     Always run for every zsh.
+#
+# ~/.zshenv
+#     Usually run for every zsh.
+#
+# /etc/zprofile
+#     Run for login shells.
+#
+# ~/.zprofile
+#     Run for login shells.
+#
+# /etc/zshrc
+#     Run for interactive shells.
+#
+# ~/.zshrc
+#     Run for interactive shells.
+#
+# /etc/zlogin
+#     Run for login shells.
+#
+# ~/.zlogin
+#     Run for login shells.
+#
+# /etc/zlogout
+#     Run for login shells.
+#
+# ~/.zlogout
+#     Run for login shells.
+
 ##
 # Ben's .zshrc configuration loader
 
