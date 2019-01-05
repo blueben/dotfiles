@@ -1,6 +1,7 @@
 .chef/*                                                 filter=git-crypt diff=git-crypt
 .config/wireshark/*                                     filter=git-crypt diff=git-crypt
 .docker/*                                               filter=git-crypt diff=git-crypt
+.gitconfig                                              filter=git-crypt diff=git-crypt
 .shellrc/site.d/nord_chef.active                        filter=git-crypt diff=git-crypt
 .shellrc/site.d/dd_api.active                           filter=git-crypt diff=git-crypt
 .shellrc/zfunc.d/nordenv                                filter=git-crypt diff=git-crypt

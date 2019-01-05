@@ -20,3 +20,5 @@ id_*
 # MacOS folder attributes
 
 **/.DS_Store
+
+.chef/*
