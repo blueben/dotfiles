@@ -1,118 +1,41 @@
-## Embedded documentation!?
-#
-# Here are the ZSH startup files and their loading order
-#
-# /etc/zshenv 
-#     Always run for every zsh.
-#
-# ~/.zshenv
-#     Usually run for every zsh.
-#
-# /etc/zprofile
-#     Run for login shells.
-#
-# ~/.zprofile
-#     Run for login shells.
-#
-# /etc/zshrc
-#     Run for interactive shells.
-#
-# ~/.zshrc
-#     Run for interactive shells.
-#
-# /etc/zlogin
-#     Run for login shells.
-#
-# ~/.zlogin
-#     Run for login shells.
-#
-# /etc/zlogout
-#     Run for login shells.
-#
-# ~/.zlogout
-#     Run for login shells.
+# This is .zshrc
+stage=".zshrc"
 
 ##
-# Ben's .zshrc configuration loader
+# Load ZSH Functions
 
-if [ -r $HOME/.shellrc/rc.d/get_os ]
+if [[ $SH_CONFIG/zfunc.d/(#qNF) ]]
 then
-  source $HOME/.shellrc/rc.d/get_os
-fi
-
-##
-# Function loader
-
-if [ -d $HOME/.shellrc/zfunc.d ]
-then
-  fpath=( $HOME/.shellrc/zfunc.d "${fpath[@]}" )
-  for file in $HOME/.shellrc/zfunc.d/*
+  fpath=( $SH_CONFIG/zfunc.d "${fpath[@]}" )
+  for file in $SH_CONFIG/zfunc.d/*
   do
+    #printf "%-15s%s\n" $stage $file 
     func_name=$(basename $file)
     autoload -Uz $func_name
   done
 fi
 
-# Load completions in 
-# .shellrc/zcomp.d
+##
+# Load ZSH completions
 
-if [[ -d $HOME/.shellrc/zcomp.d ]]
+if [[ $SH_CONFIG/zcomp.d/(#qNF) ]]
 then
-  fpath=( $HOME/.shellrc/zcomp.d "${fpath[@]}" )
-  for file in $HOME/.shellrc/zcomp.d/*
+  fpath=( $SH_CONFIG/zcomp.d "${fpath[@]}" )
+  for file in $SH_CONFIG/zcomp.d/*
   do
+    #printf "%-15s%s\n" $stage $file 
     autoload -U compinit
   done
 fi
 
-# Load all zsh configuration files from
-# .shellrc/zshrc.d
+##
+# Load additional ZSH configuration files
 
-if [ -d $HOME/.shellrc/zshrc.d ]
+if [[ $SH_CONFIG/rc.d/(#qNF) ]]
 then
-  for file in $HOME/.shellrc/zshrc.d/*.zsh
+  for file in $SH_CONFIG/rc.d/*
   do
-    source $file
+    #printf "%-15s%s\n" $stage $file 
+    source "$file"
   done
 fi
-
-# Load all files from
-# .shellrc/rc.d
-
-if [ -d $HOME/.shellrc/rc.d ]
-then
-  for file in $HOME/.shellrc/rc.d/*.sh
-  do
-    source $file
-  done
-fi
-
-# Load enabled site-specific configs from
-# .shellrc/client.d
-
-if [ -d $HOME/.shellrc/site.d ]
-then
-  for file in $HOME/.shellrc/site.d/*.active
-  do
-    source $file
-  done
-fi
-
-PATH="/Users/c70b/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/c70b/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/c70b/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/c70b/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/c70b/perl5"; export PERL_MM_OPT;
-
-AUTOSUGGEST='/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh'
-[[ -f $AUTOSUGGEST ]] && . $AUTOSUGGEST
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
