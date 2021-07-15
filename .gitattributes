@@ -1,3 +1,4 @@
+.gitattributes						!filter !diff
 .docker/*                                               filter=git-crypt diff=git-crypt
 "Library/Application Support/obs-studio/*"              filter=git-crypt diff=git-crypt
 "Library/Application Support/Code/User/settings.json"   filter=git-crypt diff=git-crypt 
