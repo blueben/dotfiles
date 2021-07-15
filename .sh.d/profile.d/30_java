@@ -1,0 +1,2 @@
+# Enable if using java on macos
+# is_darwin && export JAVA_HOME=$(/usr/libexec/java_home)

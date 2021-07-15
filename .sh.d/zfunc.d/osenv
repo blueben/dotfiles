@@ -1,0 +1,15 @@
+# Set env vars by OS type
+
+osenv () {
+    
+  OS=$1
+  VAR=$2
+
+  if [[ "$OSTYPE" =~ $OS ]]
+  then
+    export "$VAR"
+  elif [[ "$OS" = "all" ]]
+  then
+    export "$VAR"
+  fi
+}

@@ -1,0 +1,3 @@
+netlog () {
+  /usr/sbin/tcpdump -vlnettti any
+}

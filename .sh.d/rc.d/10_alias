@@ -1,0 +1,6 @@
+# Set traditional aliases
+# For function aliases, see zfunc.d
+
+which vim >/dev/null && alias vi='vim'
+
+is_darwin && alias ls='ls -G'

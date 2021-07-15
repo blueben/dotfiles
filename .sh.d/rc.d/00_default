@@ -1,0 +1,27 @@
+
+# Display the CPU time used if the command takes longer than this many seconds
+REPORTTIME=5
+
+# Don't search  users for SSH and SCP completion
+zstyle ':completion:*:ssh:*' tag-order '! users'
+zstyle ':completion:*:scp:*' tag-order '! users'
+
+# Configure ls to be colourful
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
+# Configure grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+
+if [ -e "$HOME/.dircolor" ]
+then
+  source $HOME/.dircolor
+fi
+
+# History configuration
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000000
+export SAVEHIST=1000000000
+
+# Write to history when commands are run. Read immediately.
+setopt share_history

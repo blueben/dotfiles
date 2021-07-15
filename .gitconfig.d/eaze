@@ -1,0 +1,5 @@
+[user]
+	email = bkrueger@eaze.com
+	signingkey = A9B3330DE6CFA769
+[commit]
+	gpgsign = true

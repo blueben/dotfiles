@@ -1,0 +1,4 @@
+is_freebsd () {
+  [[ "$OSTYPE" =~ "freebsd" ]]
+  return $?
+}

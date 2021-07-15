@@ -1,0 +1,10 @@
+# Set env vars that are not shell specific
+
+# Local Timezone
+export TZ="/usr/share/zoneinfo/PST8PDT"
+
+# Shell PATH Exports
+export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin"
+
+export MANPATH="/opt/local/share/man:/usr/local/man:$MANPATH"

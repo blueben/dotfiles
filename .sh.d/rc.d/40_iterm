@@ -1,0 +1,4 @@
+# iterm integration on MacOS
+ITERM_INT="${HOME}/.iterm2_shell_integration.zsh"
+
+test -e $ITERM_INT && source $ITERM_INT

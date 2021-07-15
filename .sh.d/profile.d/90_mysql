@@ -1,0 +1,3 @@
+# MySQL
+
+is_darwin && export PATH="/usr/local/opt/mysql-client/bin:$PATH"

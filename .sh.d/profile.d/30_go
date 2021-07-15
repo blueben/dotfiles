@@ -1,0 +1,10 @@
+# Shell PATH Exports
+ 
+export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin"
+
+# Go
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+is_darwin && export GOROOT=/usr/local/opt/go/libexec && export PATH=$PATH:$GOROOT/bin

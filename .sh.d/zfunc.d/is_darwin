@@ -1,0 +1,4 @@
+is_darwin () {
+  [[ "$OSTYPE" =~ "darwin" ]]
+  return $?
+}

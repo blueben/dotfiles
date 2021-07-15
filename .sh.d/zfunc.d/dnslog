@@ -1,0 +1,3 @@
+dnslog () {
+  sudo /usr/sbin/tcpdump -vlnetttti any port 53
+}

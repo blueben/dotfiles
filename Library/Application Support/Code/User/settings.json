@@ -1,0 +1,23 @@
+{
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.requirements.JDK11Warning": false,
+    "python.pythonPath": "/usr/local/bin/python3",
+    "branchwarnings.protectedBranches": [
+        "main",
+        "master"
+    ],
+    "code-runner.enableAppInsights": false,
+    "docker-explorer.enableTelemetry": false,
+    "githubPullRequests.telemetry.enabled": false,
+    "rest-client.enableTelemetry": false,
+    "editor.wordWrap": "on",
+    "aws.telemetry": false,
+    "Lua.telemetry.enable": false,
+    "redhat.telemetry.enabled": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    }
+}
