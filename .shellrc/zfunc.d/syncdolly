@@ -1,3 +1,0 @@
-syncdolly () {
-  rsync -vaSH dolly:'/ctf/*' /Users/benjamin/CTF/
-}
