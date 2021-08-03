@@ -117,5 +117,3 @@ set tags=./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../..
 
 :map <C-d> :execute 'NERDTreeToggle ' .getcwd()<CR>
 
-set diffopt+=iwhite
-

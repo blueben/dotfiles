@@ -204,7 +204,7 @@ brew "swig"
 # Send macOS User Notifications from the command-line
 brew "terminal-notifier"
 # Tool to build, change, and version infrastructure
-brew "terraform"
+brew "terraform", link: false
 # Improve Terraform's plan output
 brew "terraform_landscape"
 # Terminal multiplexer
@@ -261,6 +261,8 @@ cask "font-roboto-mono-nerd-font"
 cask "font-space-mono"
 cask "font-space-mono-nerd-font"
 cask "font-ubuntu-mono-nerd-font"
+# Free and open-source image editor
+cask "gimp"
 cask "gitbook"
 # Tools to protect your emails and files
 cask "gpg-suite"
@@ -280,6 +282,8 @@ cask "osxfuse"
 cask "rescuetime"
 # Data science software focusing on R and Python
 cask "rstudio"
+# Instant messaging application focusing on security
+cask "signal"
 # Screen capture tool with mark up and sharing features
 cask "skitch"
 # Team communication and collaboration software
