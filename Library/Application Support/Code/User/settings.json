@@ -19,5 +19,6 @@
     "redhat.telemetry.enabled": false,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
-    }
+    },
+    "aws.profile": "profile:eaze"
 }
