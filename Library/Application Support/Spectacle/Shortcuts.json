@@ -36,12 +36,12 @@
     "shortcut_name" : "MakeLarger"
   },
   {
-    "shortcut_key_binding" : "ctrl+alt+cmd+left",
-    "shortcut_name" : "MoveToPreviousDisplay"
-  },
-  {
     "shortcut_key_binding" : "alt+cmd+z",
     "shortcut_name" : "UndoLastMove"
+  },
+  {
+    "shortcut_key_binding" : "ctrl+alt+cmd+left",
+    "shortcut_name" : "MoveToPreviousDisplay"
   },
   {
     "shortcut_key_binding" : "alt+cmd+f",
