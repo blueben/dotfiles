@@ -23,7 +23,7 @@
     "aws.profile": "profile:eaze",
     "yaml.schemas": {},
     "json.schemas": [],
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 2,
     "yaml.customTags": [
         "!And",
         "!And sequence",
@@ -52,5 +52,9 @@
         "!Select sequence",
         "!Split",
         "!Split sequence"
-    ]
+    ],
+    "editor.formatOnSave": true,
+    "editor.bracketPairColorization.enabled": true,
+    "telemetry.telemetryLevel": "off",
+    "AREPL.telemetry": false
 }

@@ -10,7 +10,7 @@
         (brush "2. Hardness 050")
         (dynamics "Dynamics Off")
         (palette "Color History")
-        (brush-size 51)
+        (brush-size 53)
         (brush-hardness 0.5))
     (use-fg-bg yes)
     (use-opacity-paint-mode no)
