@@ -7,7 +7,8 @@
     "python.pythonPath": "/usr/local/bin/python3",
     "branchwarnings.protectedBranches": [
         "main",
-        "master"
+        "master",
+        "latest"
     ],
     "code-runner.enableAppInsights": false,
     "docker-explorer.enableTelemetry": false,
@@ -56,5 +57,19 @@
     "editor.formatOnSave": true,
     "editor.bracketPairColorization.enabled": true,
     "telemetry.telemetryLevel": "off",
-    "AREPL.telemetry": false
+    "AREPL.telemetry": false,
+    "editor.fontFamily": "Jetbrains Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": true,
+        "markdown": false
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "files.autoSave": "afterDelay",
+    "csharp.suppressDotnetInstallWarning": true
 }
