@@ -3,6 +3,7 @@
     "telemetry.enableCrashReporter": false,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "todo-tree.tree.showScanModeButton": false,
     "java.requirements.JDK11Warning": false,
     "python.pythonPath": "/usr/local/bin/python3",
     "branchwarnings.protectedBranches": [
@@ -71,5 +72,7 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "files.autoSave": "afterDelay",
-    "csharp.suppressDotnetInstallWarning": true
+    "csharp.suppressDotnetInstallWarning": true,
+    "workbench.iconTheme": "vscode-icons",
+    "arduino.useArduinoCli": true
 }

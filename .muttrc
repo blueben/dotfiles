@@ -1,10 +1,21 @@
-## Accounts
-#
+##
+# Accounts
 
-source ~/.mutt/accounts/work.conf
+source ~/.mutt/mailboxes
+source ~/.mutt/accounts/eaze.conf
 
 ##
-# IMAP Settings
+# General
+
+set realname = "Ben Krueger"
+set mbox_type = Maildir
+set folder = $HOME/Mail
+set spoolfile = "+Eaze/INBOX"
+set record = "+Eaze/Sent\ Items"
+set postponed = "+Eaze/Drafts"
+
+##
+# Client Settings
 
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
@@ -15,16 +26,20 @@ set ssl_force_tls=yes
 unset imap_passive 
 set mail_check=60 
 set timeout=10 
-set net_inc=5
+set net_inc=10
 
-set move = no
-
-set sort = 'threads'
-set sort_aux = 'last-date-received'
 set imap_check_subscribed
 
-## Read Settings
-#
+# mutt sidebar settings
+
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
+macro index,pager B '<enter-command>toggle sidebar_visible<enter>'
+color sidebar_new yellow default
+
+##
+# Read Settings
 
 set timeout=10
 set mail_check=5
@@ -42,15 +57,9 @@ hdr_order from to cc date sent subject
 
 set index_format="%{%b %d} %-15.15L [%Z] %s"
 
-# mutt sidebar settings
-bind index,pager \CP sidebar-prev
-bind index,pager \CN sidebar-next
-bind index,pager \CO sidebar-open
-macro index,pager B '<enter-command>toggle sidebar_visible<enter>'
-color sidebar_new yellow default
 
-## Composition Settings
-# 
+##
+# Composition Settings
 
 set editor="vim"
 set signature="~/.signature"
@@ -60,14 +69,15 @@ set forward_format="Fwd: %s"
 set attribution="* %n (%a) [%(%y%m%d %H:%M)]:"
 set forward_quote=yes
 set alias_file="~/.mutt/Aliases"
+set abort_nosubject=ask-yes
 
-## Send Settings
-#
+##
+# Send Settings
 
-set copy=yes
+set copy=no
 
-## Pretty Settings
-#
+##
+# Pretty Settings
 
 color status white blue
 color index green default ~N            # New
@@ -82,12 +92,13 @@ color header yellow default "^Bcc:"
 color header yellow default "^From:"
 color header red default "^X-.*:"
 
-## View Special Formats
-#
+##
+# View Special Formats
 
 set mailcap_path=~/.mutt/Mailcap
 auto_view text/html
 
-## Source other files
-#
+##
+# Source other files
+
 source ~/.mutt/Aliases
