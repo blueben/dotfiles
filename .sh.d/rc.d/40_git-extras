@@ -1,3 +1,7 @@
-GIT_EXTRAS_COMP=/usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
-
-source $GIT_EXTRAS_COMP
+if [ -f $HOMEBREW_PREFIX/opt/git-extras/share/git-extras/git-extras-completion.zsh ]
+then
+  source $HOMEBREW_PREFIX/opt/git-extras/share/git-extras/git-extras-completion.zsh
+elif [ -f /usr/share/zsh/vendor-completions/_git-extras ]
+then
+  source /usr/share/zsh/vendor-completions/_git-extras
+fi

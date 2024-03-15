@@ -1,0 +1,7 @@
+if [ -d /opt/homebrew ]
+then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -f $HOME/homebrew ]
+then
+  eval "$(/Users/benjamin.krueger/homebrew/bin/brew shellenv)"
+fi

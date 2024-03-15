@@ -1,0 +1,7 @@
+if [[ $OS == "Linux" ]]
+then
+  export PROMPT_SYMBOL="✨"
+elif [[ $OS == "Darwin" ]]
+then
+  export PROMPT_SYMBOL=""
+fi

@@ -8,3 +8,6 @@ export PATH="$HOME/bin:/usr/local/bin:$PATH"
 export PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin"
 
 export MANPATH="/opt/local/share/man:/usr/local/man:$MANPATH"
+
+# What OS
+export OS=$(uname)

@@ -1,6 +1,6 @@
 # chruby configuration
 
-if [ -e "/usr/local/share/chruby/chruby.sh" ]
+if [ -e "$HOMEBREW_PREFIX/share/chruby/chruby.sh" ]
 then
-  source /usr/local/share/chruby/chruby.sh
+  source $HOMEBREW_PREFIX/share/chruby/chruby.sh
 fi

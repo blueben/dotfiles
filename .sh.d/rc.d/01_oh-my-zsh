@@ -30,6 +30,6 @@ plugins=(git git-extras ssh-agent gpg-agent colored-man-pages)
 # ssh-agent plugin config
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent lifetime 10h
-zstyle :omz:plugins:ssh-agent identities id_ben.krueger.gmail.com id_ben.krueger.gmail.com-github id_bkrueger.eaze.com
+#zstyle :omz:plugins:ssh-agent identities id_ben.krueger.gmail.com id_ben.krueger.gmail.com-github
 
 source $ZSH/oh-my-zsh.sh

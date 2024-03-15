@@ -1,5 +1,0 @@
-eazenv () {
-  pushd ~/src/eaze/infrastructure
-  source ~/src/eaze/infrastructure/env/bin/activate
-  popd
-}

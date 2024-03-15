@@ -38,7 +38,7 @@ set scrolloff=2       " show this many extra lines while scrolling
 set hidden            " allow hidden unsaved buffers
 set foldcolumn=0
 "set list lcs=tab:>-,trail:-
-set paste
+set nopaste
 
 "" Search
 set hlsearch          " highlighed searches

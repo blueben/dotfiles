@@ -1,9 +1,10 @@
 # vim:ft=zsh ts=2 sw=2 sts=2
 
+ROO="🦘"
 LAMBDA="\u03bb"
 
 PROMPT='%{$fg_bold[235]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info)
-$(print $LAMBDA)  '
+$(print $PROMPT_SYMBOL $ROO $LAMBDA)  '
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg_bold[grey]%}git:%{$fg[blue]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "

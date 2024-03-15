@@ -1,12 +1,25 @@
 [user]
 	name = Ben Krueger
-	email = ben.krueger@gmail.com
+	email = benjamin.krueger@bytedance.com
+
+[url "gitr"]
+    insteadOf = git://git.byted.org/
+
+[credential "https://code.byted.org"]
+    username = benjamin.krueger
+
+[url "ssh://benjamin.krueger@git.byted.org:29418"]
+    insteadOf = https://git.byted.org
+
+#[url "git@code.byted.org:"]
+#    insteadOf = https://code.byted.org/
 
 [push]
 	default = simple
 
 [credential]
-	helper = osxkeychain
+  #helper = /usr/local/share/gcm-core/git-credential-manager
+  helper = osxkeychain
 
 [alias]
     # List things
@@ -52,7 +65,9 @@
     # run `git rebase --autosquash`
     fixup = "commit --fixup=HEAD"
 
-[includeIf "gitdir:~/src/eaze/"]
-  path = ~/.gitconfig.d/eaze
+[includeIf "gitdir:~/src/work/"]
+  path = ~/.gitconfig.d/work
 [bulkworkspaces]
-	eaze = /Users/bkrueger/src/eaze
+	work = /Users/bkrueger/src/work
+[credential "https://dev.azure.com"]
+	useHttpPath = true

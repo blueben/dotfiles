@@ -1,1 +1,10 @@
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+##
+# Load ZSH autosuggestions
+
+if [ -f $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]
+then
+  source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]
+then
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
