@@ -39,3 +39,7 @@ then
     source "$file"
   done
 fi
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/benjamin.krueger/.lmstudio/bin"
+export PATH=$HOME/.local/bin:$PATH

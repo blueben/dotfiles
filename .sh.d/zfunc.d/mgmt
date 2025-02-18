@@ -1,0 +1,14 @@
+mgmt () {
+
+  case $1 in
+  1)
+    tbs -d benjamin.krueger@10.113.224.155
+    ;;
+  2)
+    tbs -d benjamin.krueger@10.113.238.101
+    ;;
+  *)
+    echo "Pass the management host number as an argument"
+    ;;
+  esac
+}
