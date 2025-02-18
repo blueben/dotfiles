@@ -71,3 +71,5 @@
 	work = /Users/bkrueger/src/work
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[http]
+	postBuffer = 157286400
